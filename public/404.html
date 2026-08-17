@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edson Junior</title>
+    <!--
+      GitHub Pages não entende rotas client-side: ao recarregar uma URL
+      como /experiencia ele procura um arquivo físico e serve este 404.
+      Este script redireciona de volta para index.html preservando o
+      caminho, para o react-router assumir a partir daí.
+      Baseado em https://github.com/rafgraph/spa-github-pages
+    -->
+    <script>
+      var pathSegmentsToKeep = 0
+      var l = window.location
+      l.replace(
+        l.protocol +
+          '//' +
+          l.hostname +
+          (l.port ? ':' + l.port : '') +
+          l.pathname
+            .split('/')
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join('/') +
+          '/?/' +
+          l.pathname.slice(1).replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash,
+      )
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -88,10 +88,23 @@ Next.js/SSR ou usar pré-renderização estática (ex: `vite-plugin-ssg`).
 - **Formulário de contato** ainda simula o envio (`setTimeout`) — falta integrar com um
   serviço real (Formspree, EmailJS ou endpoint próprio) antes de considerar o formulário
   pronto para produção. Ver comentário `TODO` em [`src/pages/Contato.tsx`](src/pages/Contato.tsx).
-- Configurar o subdomínio `perfilP1.prupru.org` no provedor de deploy (Vercel/Netlify) apontando pro DNS de `prupru.org`.
+- Adicionar o registro DNS `CNAME perfilP1 → efojunior25.github.io` no provedor do
+  domínio `prupru.org` (esse passo não é feito por código, é externo).
 - Dados sensíveis (CID/PCD do currículo, telefone pessoal) foram deliberadamente omitidos do site público.
 
 ## Deploy
 
-Recomendado: [Vercel](https://vercel.com/) ou [Netlify](https://www.netlify.com/) (mais
-adequados para Vite do que GitHub Pages, que serviu bem a v1 estática).
+Publicado via **GitHub Pages**, com deploy automático em todo push para `main`
+(`.github/workflows/deploy.yml`: build + testes + `actions/deploy-pages`).
+
+Peculiaridades de rodar um SPA (React Router) no GitHub Pages:
+- `public/CNAME` define o domínio customizado `perfilP1.prupru.org`.
+- `public/404.html` + o script equivalente em `index.html` implementam o
+  [truque de redirect do rafgraph/spa-github-pages](https://github.com/rafgraph/spa-github-pages),
+  necessário porque o Pages não sabe rotear `/experiencia`, `/competencias` etc.
+  como o React Router — sem isso, recarregar a página em qualquer rota que não seja `/`
+  resultaria em 404.
+
+Configuração única (feita uma vez, fora do código): em Settings → Pages do repositório,
+"Build and deployment source" = **GitHub Actions**; e no provedor de DNS do `prupru.org`,
+um registro `CNAME` apontando `perfilP1` para `efojunior25.github.io`.
