@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
 
 :root {
+  --color-bg: #fafaf8;
   --color-text: #333;
   --color-link: #315e8a;
   --color-header-bg: #dee3e6;
   --color-extra-bg: #f1f2ea;
   --color-footer-bg: #1f3c58;
   --color-footer-text: #ebebeb;
+  --color-border: #e2e0da;
   --max-width: 960px;
   --gap: 24px;
-  --radius: 4px;
+  --radius: 6px;
+  --transition: 160ms ease;
 }
 
 * {
@@ -20,11 +23,13 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   color: var(--color-text);
+  background: var(--color-bg);
 }
 
 a {
   color: var(--color-link);
   text-decoration: none;
+  transition: color var(--transition), background-color var(--transition);
 }
 
 a:hover {
@@ -35,6 +40,7 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: var(--radius);
 }
 
 h1,
@@ -69,9 +75,15 @@ ol li {
   border: none;
   font-family: inherit;
   font-size: 1rem;
+  transition: background-color var(--transition), transform var(--transition);
 }
 
 .botao:hover {
   background: var(--color-link);
   text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.botao:active {
+  transform: translateY(0);
 }

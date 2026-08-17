@@ -39,6 +39,7 @@
   padding: 6px 10px;
   border-radius: var(--radius);
   color: var(--color-text);
+  transition: background-color var(--transition), color var(--transition);
 }
 
 .menu a:hover,

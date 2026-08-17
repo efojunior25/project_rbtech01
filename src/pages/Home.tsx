@@ -1,6 +1,6 @@
 import grid from '../components/Grid.module.css'
 import Seo from '../components/Seo'
-import thumbGrande from '../assets/img/thumb-grande.jpg'
+import PortalRdIllustration from '../components/PortalRdIllustration'
 
 const empresas = [
   'RD Distribuidora',
@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <Seo
         title="Início"
-        description="Edson Feitosa de Oliveira Júnior — Desenvolvedor Backend Java com experiência em Spring Boot, microsserviços, AWS e análise de dados."
+        description="Edson Feitosa de Oliveira Júnior, Desenvolvedor Backend Java com experiência em Spring Boot, microsserviços, AWS e análise de dados."
         path="/"
       />
       <div className="container">
@@ -31,14 +31,15 @@ export default function Home() {
             <h1>
               Projeto em destaque: <em>Portal RD</em>
             </h1>
-            <img
-              src={thumbGrande}
-              alt="Representação do Portal RD, sistema Java Spring Boot + React/TypeScript"
-            />
+            <PortalRdIllustration />
+            <p className={grid.caption}>
+              Ilustração representativa (não é uma captura de tela real do
+              sistema, que é interno da empresa)
+            </p>
             <p>
               Projetei e construí sozinho o Portal RD (Java Spring Boot +
               React/TypeScript), hoje em produção para os times Comercial e
-              Logística da RD Distribuidora — incluindo correções de
+              Logística da RD Distribuidora, incluindo correções de
               segurança críticas e a arquitetura de autenticação mTLS.
             </p>
             <a href="/experiencia" className="botao">

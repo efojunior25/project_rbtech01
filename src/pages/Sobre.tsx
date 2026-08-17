@@ -1,5 +1,6 @@
 import grid from '../components/Grid.module.css'
 import Seo from '../components/Seo'
+import Faq from '../components/Faq'
 import formaturaImg from '../assets/img/formatura.jpg'
 
 export default function Sobre() {
@@ -20,7 +21,7 @@ export default function Sobre() {
               integrações em nuvem (AWS), unindo isso à atuação atual na
               frente de Análise de Dados. Minha trajetória começou na
               segurança eletrônica e passou pelo Mercado Livre antes de
-              chegar à RD Distribuidora — um caminho que me ensinou a
+              chegar à RD Distribuidora, um caminho que me ensinou a
               resolver problemas sob pressão e criar soluções que unem
               tecnologia e empatia.
             </p>
@@ -84,6 +85,13 @@ export default function Sobre() {
             </p>
           </section>
         </div>
+      </div>
+
+      <div className="container">
+        <section style={{ paddingBlock: 20 }}>
+          <h2>Perguntas frequentes</h2>
+          <Faq />
+        </section>
       </div>
     </>
   )

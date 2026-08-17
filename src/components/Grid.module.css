@@ -16,3 +16,9 @@
 .half {
   flex: 1 1 320px;
 }
+
+.caption {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 4px;
+}

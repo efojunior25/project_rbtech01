@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import Header from './Header'
 import Footer from './Footer'
+import MobileCta from './MobileCta'
 import styles from './Layout.module.css'
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -10,8 +11,11 @@ export default function Layout({ children }: { children: ReactNode }) {
         Pular para o conteúdo
       </a>
       <Header />
-      <main id="conteudo">{children}</main>
+      <main id="conteudo" className={styles.main}>
+        {children}
+      </main>
       <Footer />
+      <MobileCta />
     </>
   )
 }

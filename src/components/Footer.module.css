@@ -2,6 +2,28 @@
   background: var(--color-footer-bg);
   color: var(--color-footer-text);
   padding: 20px 0;
-  text-align: center;
   font-weight: 100;
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 24px;
+  text-align: center;
+}
+
+.inner nav {
+  display: flex;
+  gap: 16px;
+}
+
+.inner a {
+  color: var(--color-footer-text);
+  opacity: 0.85;
+}
+
+.inner a:hover {
+  opacity: 1;
 }

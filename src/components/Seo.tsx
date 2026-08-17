@@ -25,7 +25,7 @@ export default function Seo({ title, description, path }: SeoProps) {
       <meta property="og:url" content={url} />
       <meta property="og:locale" content="pt_BR" />
 
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
     </Helmet>

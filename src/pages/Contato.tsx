@@ -35,6 +35,9 @@ export default function Contato() {
         <section className={grid.row}>
           <div className={grid.main}>
             <h1>Envie Sua Mensagem</h1>
+            <p className={styles.prazo}>
+              Costumo responder em até <strong>2 dias úteis</strong>.
+            </p>
             <form className={styles.form} onSubmit={handleSubmit}>
               <label htmlFor="nome">Seu nome:</label>
               <input type="text" name="nome" id="nome" required />

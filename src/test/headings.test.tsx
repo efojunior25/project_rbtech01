@@ -2,7 +2,16 @@ import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import App from '../App'
 
-const rotas = ['/', '/experiencia', '/competencias', '/sobre', '/contato']
+const rotas = [
+  '/',
+  '/experiencia',
+  '/competencias',
+  '/sobre',
+  '/contato',
+  '/privacidade',
+  '/termos',
+  '/rota-que-nao-existe',
+]
 
 describe('Acessibilidade: hierarquia de headings', () => {
   it.each(rotas)('a página "%s" tem exatamente um h1 e nenhum salto de nível', (rota) => {

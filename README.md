@@ -6,6 +6,9 @@ Site pessoal de Edson Feitosa de Oliveira Júnior, desenvolvedor Backend Java. E
 HTML/CSS puro feito em 2022. A ideia deste repositório é servir tanto como portfólio
 funcional quanto como demonstração prática da minha evolução técnica.
 
+Este site passou por uma auditoria de design/UX/SEO/CRO contra um checklist de 40 pontos —
+ver [CHECKLIST.md](CHECKLIST.md) para o detalhamento item a item.
+
 ## O que mudou da v1 para a v2
 
 | | v1 (2022) | v2 (atual) |
@@ -83,6 +86,28 @@ Next.js/SSR ou usar pré-renderização estática (ex: `vite-plugin-ssg`).
 > **Domínio:** o site deve ficar publicado em `perfilP1.prupru.org` — é o valor já usado
 > em `Seo.tsx`, `robots.txt`, `sitemap.xml` e nos dados estruturados de `index.html`.
 
+**OG image:** `public/og-image.svg` é um cartão 1200×630 construído em SVG puro (sem
+depender de screenshot). A maioria das plataformas atuais renderiza SVG em preview de
+link, mas algumas (principalmente clientes de e-mail e versões antigas de apps) só
+aceitam JPG/PNG. Se precisar de compatibilidade máxima, converta esse SVG pra PNG (ex:
+abrindo `public/og-image.svg` no navegador, print/screenshot em 1200×630, ou usando
+`npx sharp-cli` / Figma / Squoosh) e troque a extensão nas referências em `Seo.tsx` e
+`index.html`.
+
+## Analytics (GA4)
+
+Integração condicional: sem `VITE_GA_MEASUREMENT_ID` definido, nenhum script de
+analytics carrega (padrão privacy-first, nada pra desativar). Para ativar:
+
+1. Crie uma propriedade GA4 em [analytics.google.com](https://analytics.google.com) e
+   pegue o Measurement ID (`G-XXXXXXXXXX`) em Admin → Fluxos de dados.
+2. **Local:** copie `.env.example` para `.env` e preencha `VITE_GA_MEASUREMENT_ID`.
+3. **Deploy (GitHub Actions):** adicione o mesmo valor como secret do repositório em
+   Settings → Secrets and variables → Actions → `VITE_GA_MEASUREMENT_ID`. O workflow
+   `deploy.yml` já está preparado para injetá-lo no build.
+
+Ver [`src/components/Analytics.tsx`](src/components/Analytics.tsx).
+
 ## Pendências conhecidas (TODO)
 
 - **Formulário de contato** ainda simula o envio (`setTimeout`) — falta integrar com um
@@ -90,6 +115,7 @@ Next.js/SSR ou usar pré-renderização estática (ex: `vite-plugin-ssg`).
   pronto para produção. Ver comentário `TODO` em [`src/pages/Contato.tsx`](src/pages/Contato.tsx).
 - Adicionar o registro DNS `CNAME perfilP1 → efojunior25.github.io` no provedor do
   domínio `prupru.org` (esse passo não é feito por código, é externo).
+- Configurar o secret `VITE_GA_MEASUREMENT_ID` no GitHub quando o GA4 estiver criado.
 - Dados sensíveis (CID/PCD do currículo, telefone pessoal) foram deliberadamente omitidos do site público.
 
 ## Deploy

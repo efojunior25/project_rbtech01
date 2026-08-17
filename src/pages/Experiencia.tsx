@@ -8,7 +8,7 @@ const experiencias = [
     empresa: 'RD Distribuidora',
     periodo: '2026 — atual',
     destaques: [
-      'Projetou e construiu sozinho o "Portal RD" (Java Spring Boot + React/TypeScript), hoje em produção para os times Comercial e Logística — ~95% de autoria confirmada via histórico Git.',
+      'Projetou e construiu sozinho o "Portal RD" (Java Spring Boot + React/TypeScript), hoje em produção para os times Comercial e Logística (~95% de autoria confirmada via histórico Git).',
       'Corrigiu vulnerabilidades críticas herdadas: migração de hash de senha para BCrypt, eliminação de CORS permissivo e remoção de credenciais expostas no código-fonte.',
       'Projetou a arquitetura de autenticação mTLS por certificado de dispositivo (AD CS + GPO).',
       'Manteve fluxo estruturado de desenvolvimento com 52 pull requests revisados e integrados.',
