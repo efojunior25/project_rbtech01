@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://efojunior25.dev/sitemap.xml

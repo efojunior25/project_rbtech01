@@ -1,5 +1,6 @@
 import styles from './Experiencia.module.css'
 import grid from '../components/Grid.module.css'
+import Seo from '../components/Seo'
 
 const experiencias = [
   {
@@ -59,6 +60,11 @@ const certificacoes = [
 export default function Experiencia() {
   return (
     <>
+      <Seo
+        title="Experiência"
+        description="Trajetória profissional de Edson Feitosa: RD Distribuidora, Mercado Livre, Ibrowse e formação em Engenharia de Software e Sistemas para Internet."
+        path="/experiencia"
+      />
       <div className="container">
         <section>
           <h1>Experiência Profissional</h1>

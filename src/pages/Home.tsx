@@ -1,4 +1,5 @@
 import grid from '../components/Grid.module.css'
+import Seo from '../components/Seo'
 import thumbGrande from '../assets/img/thumb-grande.jpg'
 
 const empresas = [
@@ -19,6 +20,11 @@ const certificacoes = [
 export default function Home() {
   return (
     <>
+      <Seo
+        title="Início"
+        description="Edson Feitosa de Oliveira Júnior — Desenvolvedor Backend Java com experiência em Spring Boot, microsserviços, AWS e análise de dados."
+        path="/"
+      />
       <div className="container">
         <section className={grid.row}>
           <div className={grid.main}>

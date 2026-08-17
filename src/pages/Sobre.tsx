@@ -1,9 +1,15 @@
 import grid from '../components/Grid.module.css'
+import Seo from '../components/Seo'
 import formaturaImg from '../assets/img/formatura.jpg'
 
 export default function Sobre() {
   return (
     <>
+      <Seo
+        title="Sobre mim"
+        description="Conheça a trajetória de Edson Feitosa: da segurança eletrônica ao desenvolvimento backend Java, unindo tecnologia e resolução de problemas reais."
+        path="/sobre"
+      />
       <div className="container">
         <section className={grid.row}>
           <div className={grid.main}>

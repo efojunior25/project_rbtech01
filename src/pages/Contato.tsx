@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from 'react'
 import grid from '../components/Grid.module.css'
+import Seo from '../components/Seo'
 import styles from './Contato.module.css'
 
 type Status = 'idle' | 'sending' | 'sent' | 'error'
@@ -25,6 +26,11 @@ export default function Contato() {
 
   return (
     <>
+      <Seo
+        title="Contato"
+        description="Fale com Edson Feitosa: envie uma mensagem ou acesse diretamente o LinkedIn e o GitHub."
+        path="/contato"
+      />
       <div className="container">
         <section className={grid.row}>
           <div className={grid.main}>

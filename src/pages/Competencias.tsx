@@ -1,4 +1,5 @@
 import grid from '../components/Grid.module.css'
+import Seo from '../components/Seo'
 import ideiaImg from '../assets/img/ideia.jpg'
 
 const categorias = [
@@ -39,6 +40,11 @@ const categorias = [
 export default function Competencias() {
   return (
     <>
+      <Seo
+        title="Competências"
+        description="Stack técnica de Edson Feitosa: Java, Spring Boot, React, TypeScript, AWS, Docker, SQL Server, PostgreSQL e mais."
+        path="/competencias"
+      />
       <div className="container">
         <section className={grid.row}>
           <div className={grid.main}>

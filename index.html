@@ -4,11 +4,43 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Edson Feitosa de Oliveira Júnior — Desenvolvedor Backend Java, Spring Boot, microsserviços e análise de dados."
-    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Edson Feitosa de Oliveira Júnior" />
+
+    <!--
+      Tags que variam por página (title, description, canonical, og:title,
+      og:description) são injetadas em runtime pelo componente <Seo> via
+      react-helmet-async — ver src/components/Seo.tsx. Não duplicar aqui:
+      o Helmet só sabe substituir tags que ele mesmo renderizou.
+    -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Edson Feitosa" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary" />
+
     <title>Edson Feitosa - Desenvolvedor Backend Java</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Edson Feitosa de Oliveira Júnior",
+        "jobTitle": "Desenvolvedor Backend Java",
+        "url": "https://efojunior25.dev",
+        "sameAs": [
+          "https://www.linkedin.com/in/efojunior25/",
+          "https://github.com/efojunior25"
+        ],
+        "knowsAbout": [
+          "Java",
+          "Spring Boot",
+          "Microsserviços",
+          "React",
+          "AWS",
+          "Análise de Dados"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
