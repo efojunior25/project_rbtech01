@@ -1,0 +1,37 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+}
+
+.form label {
+  font-size: 13px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.form input,
+.form textarea {
+  padding: 8px;
+  margin-top: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.form button {
+  align-self: flex-start;
+  margin-top: 12px;
+}
+
+.sucesso {
+  color: #1a7a3c;
+}
+
+.erro {
+  color: #b3261e;
+}
