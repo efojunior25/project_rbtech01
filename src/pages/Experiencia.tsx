@@ -62,7 +62,7 @@ export default function Experiencia() {
     <>
       <Seo
         title="Experiência"
-        description="Trajetória profissional de Edson Feitosa: RD Distribuidora, Mercado Livre, Ibrowse e formação em Engenharia de Software e Sistemas para Internet."
+        description="Trajetória profissional de Edson Junior: RD Distribuidora, Mercado Livre, Ibrowse e formação em Engenharia de Software e Sistemas para Internet."
         path="/experiencia"
       />
       <div className="container">

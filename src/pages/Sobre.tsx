@@ -7,7 +7,7 @@ export default function Sobre() {
     <>
       <Seo
         title="Sobre mim"
-        description="Conheça a trajetória de Edson Feitosa: da segurança eletrônica ao desenvolvimento backend Java, unindo tecnologia e resolução de problemas reais."
+        description="Conheça a trajetória de Edson Junior: da segurança eletrônica ao desenvolvimento backend Java, unindo tecnologia e resolução de problemas reais."
         path="/sobre"
       />
       <div className="container">

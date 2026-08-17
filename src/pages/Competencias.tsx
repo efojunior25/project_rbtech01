@@ -42,7 +42,7 @@ export default function Competencias() {
     <>
       <Seo
         title="Competências"
-        description="Stack técnica de Edson Feitosa: Java, Spring Boot, React, TypeScript, AWS, Docker, SQL Server, PostgreSQL e mais."
+        description="Stack técnica de Edson Junior: Java, Spring Boot, React, TypeScript, AWS, Docker, SQL Server, PostgreSQL e mais."
         path="/competencias"
       />
       <div className="container">

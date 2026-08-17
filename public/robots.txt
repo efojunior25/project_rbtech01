@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://efojunior25.dev/sitemap.xml
+Sitemap: https://perfilP1.prupru.org/sitemap.xml

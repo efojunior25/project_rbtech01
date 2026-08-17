@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 
-const SITE_NAME = 'Edson Feitosa'
-const SITE_URL = 'https://efojunior25.dev'
+const SITE_NAME = 'Edson Junior'
+const SITE_URL = 'https://perfilP1.prupru.org'
 
 type SeoProps = {
   title: string

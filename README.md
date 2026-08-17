@@ -1,4 +1,4 @@
-# Edson Feitosa — Portfólio (v2)
+# Edson Junior — Portfólio (v2)
 
 Site pessoal de Edson Feitosa de Oliveira Júnior, desenvolvedor Backend Java. Esta é a
 **reescrita em React + Vite + TypeScript** do meu primeiro projeto público no GitHub
@@ -80,16 +80,15 @@ só verão o `og:title`/`og:description` genéricos definidos estaticamente em `
 não o específico de cada rota. Resolver isso definitivamente exigiria migrar para
 Next.js/SSR ou usar pré-renderização estática (ex: `vite-plugin-ssg`).
 
-> **Nota:** o domínio usado em `Seo.tsx`, `robots.txt` e `sitemap.xml`
-> (`efojunior25.dev`) é um placeholder — substituir pelo domínio real assim que o
-> deploy for feito.
+> **Domínio:** o site deve ficar publicado em `perfilP1.prupru.org` — é o valor já usado
+> em `Seo.tsx`, `robots.txt`, `sitemap.xml` e nos dados estruturados de `index.html`.
 
 ## Pendências conhecidas (TODO)
 
 - **Formulário de contato** ainda simula o envio (`setTimeout`) — falta integrar com um
   serviço real (Formspree, EmailJS ou endpoint próprio) antes de considerar o formulário
   pronto para produção. Ver comentário `TODO` em [`src/pages/Contato.tsx`](src/pages/Contato.tsx).
-- Domínio placeholder (`efojunior25.dev`) precisa ser trocado pelo real após o deploy.
+- Configurar o subdomínio `perfilP1.prupru.org` no provedor de deploy (Vercel/Netlify) apontando pro DNS de `prupru.org`.
 - Dados sensíveis (CID/PCD do currículo, telefone pessoal) foram deliberadamente omitidos do site público.
 
 ## Deploy

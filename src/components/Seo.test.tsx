@@ -10,7 +10,7 @@ describe('Seo', () => {
       </HelmetProvider>,
     )
 
-    await waitFor(() => expect(document.title).toBe('Página X | Edson Feitosa'))
+    await waitFor(() => expect(document.title).toBe('Página X | Edson Junior'))
 
     expect(document.querySelectorAll('meta[name="description"]')).toHaveLength(1)
     expect(document.querySelectorAll('meta[property="og:title"]')).toHaveLength(1)
@@ -19,7 +19,7 @@ describe('Seo', () => {
     ).toHaveAttribute('content', 'Descrição da página X')
     expect(document.querySelector('link[rel="canonical"]')).toHaveAttribute(
       'href',
-      'https://efojunior25.dev/x',
+      'https://perfilP1.prupru.org/x',
     )
   })
 })

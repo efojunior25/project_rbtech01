@@ -14,7 +14,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
         <NavLink to="/" className={styles.logo}>
-          Edson Feitosa
+          Edson Junior
         </NavLink>
         <nav aria-label="Navegação principal">
           <ul className={styles.menu}>

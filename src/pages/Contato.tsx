@@ -28,7 +28,7 @@ export default function Contato() {
     <>
       <Seo
         title="Contato"
-        description="Fale com Edson Feitosa: envie uma mensagem ou acesse diretamente o LinkedIn e o GitHub."
+        description="Fale com Edson Junior: envie uma mensagem ou acesse diretamente o LinkedIn e o GitHub."
         path="/contato"
       />
       <div className="container">
